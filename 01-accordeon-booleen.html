@@ -9,20 +9,23 @@
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <body>
     <h1>Accordéon avec des booléens</h1>
-    <accordeon>
-      <section x-data="Section 1">
-        <button>bouton 1</button>
-        <p x-transition.duration.500ms>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam alias amet maxime expedita consequuntur quasi? In soluta enim ipsa dicta tempore dolore dolorum, recusandae ducimus modi ipsam odit architecto eum?</p>
-      </section >
-      <section x-data="Section 2">
-        <button>bouton 2</button>
-        <p x-transition.duration.500ms>Ipsum accusamus numquam magni, nobis minus magnam temporibus adipisci possimus quam doloremque quis, distinctio dicta repudiandae impedit. Suscipit vero assumenda in omnis a eum, iusto id reprehenderit magni! Dolorum, facilis.</p>
-      </section>
-      <section x-data="Section 3">
-        <button>bouton 3</button>
-        <p x-transition.duration.500ms>Exercitationem sint facilis ut, vitae ratione totam adipisci beatae illo, rem in aspernatur expedita dolorem porro natus illum enim reprehenderit facere corporis, qui distinctio. Sequi ex non nulla totam alias.</p>
-      </section>
-    </accordeon>
+    <nav>
+      <div class="accordeon">
+        <section x-data="{IsOpen : false}">
+          <button @click="IsOpen = ! IsOpen">bouton 1</button>
+          <p x-show = "IsOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquam, aliquid, voluptatibus quas assumenda repellendus esse earum incidunt illum ducimus harum voluptate vel placeat consequuntur perferendis dolores! Corporis, perspiciatis. Voluptatibus?</p>
+        </section>
+        <section x-data="{IsOpen : false}">
+          <button @click="IsOpen = ! IsOpen" >bouton 2</button>
+          <p x-show = "IsOpen">Voluptates iste reiciendis neque consectetur. Reiciendis asperiores odit tenetur aut repellendus facilis velit fugiat architecto deserunt exercitationem aperiam, sapiente soluta porro eligendi eveniet unde, inventore laboriosam excepturi ex assumenda quam?</p>
+        </section>
+        <section x-data="{IsOpen : false}">
+          <button @click="IsOpen = ! IsOpen">bouton 3</button>
+          <p x-show = "IsOpen">Fugiat sapiente eveniet numquam sequi pariatur asperiores, temporibus error odio facilis, iure accusamus inventore praesentium vitae aspernatur. Quis animi ducimus nostrum, quaerat tempora rerum perferendis provident quidem repellat voluptatum ad?</p>
+        </section>
+      </div>
+
+    </nav>
 
   </body>
 </html>
