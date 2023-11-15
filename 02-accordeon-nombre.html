@@ -4,26 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
-    <nav>
-      <div class="accordeon">
-        <section x-data=>
-          <button @click="IsOpen = ! IsOpen">bouton 1</button>
-          <p x-show = "IsOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquam, aliquid, voluptatibus quas assumenda repellendus esse earum incidunt illum ducimus harum voluptate vel placeat consequuntur perferendis dolores! Corporis, perspiciatis. Voluptatibus?</p>
+      <div class="accordeon" x-data="{IsOpen: 0}" >
+        <section >
+          <button @click="IsOpen = 1">bouton 1</button>
+          <p x-show = "IsOpen === 1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquam, aliquid, voluptatibus quas assumenda repellendus esse earum incidunt illum ducimus harum voluptate vel placeat consequuntur perferendis dolores! Corporis, perspiciatis. Voluptatibus?</p>
         </section>
-        <section x-data=>
-          <button @click="IsOpen = ! IsOpen" >bouton 2</button>
-          <p x-show = "IsOpen">Voluptates iste reiciendis neque consectetur. Reiciendis asperiores odit tenetur aut repellendus facilis velit fugiat architecto deserunt exercitationem aperiam, sapiente soluta porro eligendi eveniet unde, inventore laboriosam excepturi ex assumenda quam?</p>
+        <section  >
+          <button @click="IsOpen = 2" >bouton 2</button>
+          <p x-show = "IsOpen === 2">Voluptates iste reiciendis neque consectetur. Reiciendis asperiores odit tenetur aut repellendus facilis velit fugiat architecto deserunt exercitationem aperiam, sapiente soluta porro eligendi eveniet unde, inventore laboriosam excepturi ex assumenda quam?</p>
         </section>
-        <section x-data=>
-          <button @click="IsOpen = ! IsOpen">bouton 3</button>
-          <p x-show = "IsOpen">Fugiat sapiente eveniet numquam sequi pariatur asperiores, temporibus error odio facilis, iure accusamus inventore praesentium vitae aspernatur. Quis animi ducimus nostrum, quaerat tempora rerum perferendis provident quidem repellat voluptatum ad?</p>
+        <section >
+          <button @click="IsOpen = 3">bouton 3</button>
+          <p x-show = "IsOpen === 3">Fugiat sapiente eveniet numquam sequi pariatur asperiores, temporibus error odio facilis, iure accusamus inventore praesentium vitae aspernatur. Quis animi ducimus nostrum, quaerat tempora rerum perferendis provident quidem repellat voluptatum ad?</p>
         </section>
       </div>
-
-    </nav>
   </body>
 </html>
