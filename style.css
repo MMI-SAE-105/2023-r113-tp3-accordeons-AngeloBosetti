@@ -1,4 +1,4 @@
-CSS :
+
 #accordeon {
      /* pour que les éléments soient alignés horizontalement */
      display : flex;
@@ -15,7 +15,7 @@ CSS :
      /* pour cacher le contenu dépassant de l'élément */
      overflow : hidden;
      /* pour l'animation, transition sur width */
-     
+     transition : width 0.5s;
      /* couleur de fond #eee */
      background : #eee;
      /* pour enlever les puces */
