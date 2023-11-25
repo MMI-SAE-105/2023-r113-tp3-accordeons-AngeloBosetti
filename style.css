@@ -61,3 +61,16 @@
      /* pour éviter les "padding" par défaut */
         padding : 0;
 }
+
+
+.accordeon section {
+     /* Initial state */
+     transform: scaleY(0);
+     transform-origin: top;
+     transition: transform 0.3s ease-in-out;
+ }
+
+ .accordeon section[x-show] {
+     /* State when x-show is true */
+     transform: scaleY(1);
+ }

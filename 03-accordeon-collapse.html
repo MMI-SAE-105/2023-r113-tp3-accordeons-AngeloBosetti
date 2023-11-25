@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Accordéon avec x-collapse</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
   </head>
   <body>
-    <h1>Accordéon avec <code>x-collapse</code></h1>
-    <div class="accordeon">
-      <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt hic itaque sapiente soluta dolores reiciendis, laborum ipsam, id inventore vel numquam cumque dolorem suscipit. Error ut voluptatum sit quae tenetur.</p>
-      </section>
-      <section>
-        <button>bouton 2</button>
-        <p>Culpa excepturi labore adipisci, maxime eveniet unde nulla maiores animi iusto nihil ut laboriosam nostrum, sint molestias ratione quia doloremque quibusdam suscipit rerum ea omnis sit explicabo? Eligendi, atque eos.</p>
-      </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Quibusdam saepe eius doloribus voluptatem tenetur natus laudantium omnis beatae nesciunt optio, recusandae qui sint reiciendis accusantium repellendus debitis porro, praesentium eum eaque expedita. Ad dolorum autem accusamus ipsum consequatur.</p>
-      </section>
-    </div>
+    <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+      <div class="accordeon" x-data="{IsOpen: 0}" >
+        <section class="section">
+          <button @click="IsOpen = 1" >bouton 1</button>
+          <p x-show = "IsOpen === 1"  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquam, aliquid, voluptatibus quas assumenda repellendus esse earum incidunt illum ducimus harum voluptate vel placeat consequuntur perferendis dolores! Corporis, perspiciatis. Voluptatibus?</p>
+        </section>
+        <section class="section" >
+          <button @click="IsOpen = 2" >bouton 2</button>
+          <p x-show = "IsOpen === 2" >Voluptates iste reiciendis neque consectetur. Reiciendis asperiores odit tenetur aut repellendus facilis velit fugiat architecto deserunt exercitationem aperiam, sapiente soluta porro eligendi eveniet unde, inventore laboriosam excepturi ex assumenda quam?</p>
+        </section>
+        <section class="section">
+          <button @click="IsOpen = 3">bouton 3</button>
+          <p x-show = "IsOpen === 3" >Fugiat sapiente eveniet numquam sequi pariatur asperiores, temporibus error odio facilis, iure accusamus inventore praesentium vitae aspernatur. Quis animi ducimus nostrum, quaerat tempora rerum perferendis provident quidem repellat voluptatum ad?</p>
+        </section>
+      </div>
   </body>
 </html>
