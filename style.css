@@ -74,3 +74,18 @@
      /* State when x-show is true */
      transform: scaleY(1);
  }
+ 
+  [role="tablist"] {
+     position: relative;
+     height: 300px; 
+     width: 500px; 
+   }
+   
+   [role="tabpanel"] {
+     position: absolute;
+     opacity: 0;
+   }
+   
+   [role="tabpanel"]:actif {
+     opacity: 1;
+   }
