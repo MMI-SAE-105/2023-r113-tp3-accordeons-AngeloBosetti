@@ -4,9 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <title>Onglets</title>
   </head>
   <body>
     <h1>Onglets</h1>
+
+      <div id="onglets" x-data="{ ouvert: 1 }">
+        <!-- Les onglets -->
+        <div role="tablist">
+          <ul>
+            <li role="tab" :class="{ actif: ouvert === 1 }" @click="ouvert = 1">Onglet 1</li>
+            <li role="tab" :class="{ actif: ouvert === 2 }" @click="ouvert = 2">Onglet 2</li>
+            <li role="tab" :class="{ actif: ouvert === 3 }" @click="ouvert = 3">Onglet 3</li>
+          </ul>
+        </div>
+        <!-- Les panneaux -->
+        <div>
+          <div role="tabpanel" x-show="ouvert === 1" >
+            <h1>Panneau 1</h1>
+            <p>Lorem ipsum dolor sit amet...</p>
+          </div>
+          <div role="tabpanel" x-show="ouvert === 2">
+            <h1>Panneau 2</h1>
+            <p>Lorem ipsum dolor sit amet...</p>
+          </div>
+          <div role="tabpanel" x-show="ouvert === 3">
+            <h1>Panneau 3</h1>
+            <p>Lorem ipsum dolor sit amet...</p>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
